@@ -21,6 +21,18 @@ namespace DesignPattern05_Singleton
             }
 
             Console.WriteLine("End.");
+
+            for(int i=0; i<10; i++)
+            {
+                Console.WriteLine(TicketMaker.GetNextTicketNumber());
+            }
+
+            var ticketMaker2 = TicketMaker2.GetInstance();
+
+            for (int i=0; i<10; i++)
+            {
+                Console.WriteLine(ticketMaker2.GetNextTicketNumber());
+            }
         }
     }
 }
